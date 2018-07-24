@@ -14,25 +14,11 @@ class Model
     private $port = "3306";
     private $host = "localhost";
 
-     /**
-     * Constructeur avec vérification si usage local ou en ligne
-     */
     public function __construct()
     {
-        if ($serveur == "localhost" or $serveur == "localhost:8080" or $serveur == "127.0.0.1") {
-            $this->$user = "root";
-            $this->$mdp = "genius371524";
-            $this->$bdd = "ecommerce";
-            $this->$host = "localhost";
-            $this->$port = "3306";
-        }else{
-            $this->$user = "db104314";
-            $this->$mdp = "371524253246";
-            $this->$bdd = "db28663_forum";
-            $this->$host = "db28663-forum.sql-pro.online.net";
-            $this->$port = "3306";
-        }
-
+         /**
+         * Constructeur avec vérification si usage local ou en ligne
+         */
     }
 
     public function connect() {

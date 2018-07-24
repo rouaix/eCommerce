@@ -46,6 +46,19 @@ class Route
         }
         else {
             require_once PATH_VIEW."404.php";
+            //require_once PATH_VIEW."accueil.php";
+        }
+    }
+
+    public function setController ($action) {
+        global $app;
+        $path = PATH_CONTROLLER.$action.'.php';
+
+        if ( is_file($path) ) {
+            require_once $path;
+        }
+        else {
+            //require_once PATH_VIEW."404.php";
             require_once PATH_VIEW."accueil.php";
         }
     }
