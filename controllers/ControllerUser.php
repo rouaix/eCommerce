@@ -15,11 +15,11 @@ class ControllerUser extends ModelUser
     }
 
     /** Appel du modèle pour vérification de la présence de l'adresse mail pour les nouveaux users et insertion ou message d'erreur si existe' */
-    public function setUsers ($user_nom,$user_prenom,$user_email,$user_motdepasse) {
+    public function setUser ($user_nom,$user_prenom,$user_email,$user_motdepasse) {
         if (parent::userExiste($user_email)){
             $erreur = 'Adresse mail existante.';
         }else{
-            if (parent::setUser($user_nom,$user_prenom,$user_email,$user_motdepasse)){
+            if (parent::insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse)){
                 $message = 'Yeap ! <br /> enregistré ...';
             }else{
                 $erreur = 'Inscription impossible. ';

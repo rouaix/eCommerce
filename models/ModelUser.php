@@ -34,9 +34,20 @@ class ModelUser extends Model
 
     }
 
-    public function setUser(){
+    /** Ajout d'un nouveau user */
+    public function insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse){
         $db = parent::connect();
-        $ql = '';
+        $ql = ' INSERT
+                INTO users (user_id,user_nom,user_prenom,user_email,user_motdepasse)
+                VALUES (?,?,?,?,?,?)';
+        $query = $db->prepare($sql);
+        $query->execute(array(
+                null,
+                '.$user_nom.',
+                '.$user_prenom.',
+                '.$user_email.',
+                '.$user_motdepasse.',
+        ));
     }
 
     public function getAll() {
