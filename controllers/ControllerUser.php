@@ -14,7 +14,9 @@ class ControllerUser extends ModelUser
         // TODO - Insert your code here
     }
 
-    /** Appel du modèle pour vérification de la présence de l'adresse mail pour les nouveaux users et insertion ou message d'erreur si existe' */
+    /**
+    Appel du modèle pour vérification de la présence de l'adresse mail pour les nouveaux users et insertion ou message d'erreur si existe'
+    */
     public function setUser ($user_nom,$user_prenom,$user_email,$user_motdepasse) {
         if (parent::userExiste($user_email)){
             $erreur = 'Adresse mail existante.';
@@ -29,7 +31,9 @@ class ControllerUser extends ModelUser
         require_once PATH_VIEW."layout.php";
     }
 
-    /** Appel du modèle pour liste de tous les users */
+    /**
+    Appel du modèle pour liste de tous les users
+    */
     public function getUsers () {
         $listeViewUser = parent::getAll();
         if(count($listeViewUser)==0){

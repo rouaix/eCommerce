@@ -1,15 +1,15 @@
 <?php
+    if(!isset($_SESSION)){session_start();}
+
+    if(!isset($_SESSION["page"])){
+        $_SESSION["page"] = 'accueil';
+    }
 
     if (!isset($_SERVER['REQUEST_URI'])) {
             $_SERVER['REQUEST_URI'] = '';
     }
-    $_SERVER['PATH_INFO'] = substr(urldecode($_SERVER['REQUEST_URI']),-strlen($_SERVER['REQUEST_URI'])+1 );
 
-    /*
-    echo '<p>REQUEST_URI = '.$_SERVER['REQUEST_URI'].'</p>';
-    echo '<p>PATH_INFO = '.$_SERVER['PATH_INFO'].'</p>';
-    echo '<p>SERVER_NAME = '.$_SERVER['HTTP_HOST'].'</p>';
-    */
+    $_SERVER['PATH_INFO'] = substr(urldecode($_SERVER['REQUEST_URI']),-strlen($_SERVER['REQUEST_URI'])+1 );
 
     $serveur = $_SERVER['SERVER_NAME'];
 
@@ -24,6 +24,9 @@
     /*
     echo '<p>__DIR__ = '.__DIR__.'</p>';
     echo '<p>__WWW__ = '.WWW.'</p>';
+    echo '<p>REQUEST_URI = '.$_SERVER['REQUEST_URI'].'</p>';
+    echo '<p>PATH_INFO = '.$_SERVER['PATH_INFO'].'</p>';
+    echo '<p>SERVER_NAME = '.$_SERVER['HTTP_HOST'].'</p>';
     */
 
     define('PATH_WEB',  __DIR__);

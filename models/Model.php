@@ -32,7 +32,6 @@ class Model
             include PATH_VIEW.'500.php';
             die();
         }
-        echo "<P>Je me connect à ma base de donnée</P>";
     }
 
     /**
