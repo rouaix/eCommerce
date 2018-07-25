@@ -45,6 +45,30 @@ class MUser extends Model
         ));
     }
 
+    /** Efface user */
+    public function deleteUser($id){
+        $db = parent::connect();
+        $ql = ' DELETE * FROM users WHERE user_id = '.$id.'';
+        $query = $db->prepare($sql);
+        $query->execute();
+    }
+
+    public function updateUser($id,$champ,$valeur){
+        $db = parent::connect();
+        $ql = ' UPDATE user set ('.$champ.' = "'.$valeur.'") WHERE user_id = '.$id.'';
+        $query = $db->prepare($sql);
+        $query->execute();
+    }
+
+    public function readUser($id){
+        $db = parent::connect();
+        $sql = 'select * from users where user_id = '".$id."' ';
+        $query = $db->prepare($sql);
+        $query->execute();
+        $infoUser = $query->fetchAll();
+        return $infoUser;
+    }
+
     public function getAll() {
         $db = parent::connect();
         $sql = 'select * from users';
@@ -54,4 +78,3 @@ class MUser extends Model
         return $listeViewUser;
     }
 }
-
