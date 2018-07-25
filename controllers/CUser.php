@@ -14,7 +14,7 @@ class CUser extends MUser
         // TODO - Insert your code here
     }
 
-    /**
+    /*
     Appel du modèle pour vérification de la présence de l'adresse mail pour les nouveaux users et insertion ou message d'erreur si existe'
     */
     public function setUser ($user_nom,$user_prenom,$user_email,$user_motdepasse) {
@@ -31,7 +31,9 @@ class CUser extends MUser
         require_once PATH_VIEW."layout.php";
     }
 
-    /** Appel du modèle pour liste de tous les users */
+    /*
+    Appel du modèle pour liste de tous les users
+    */
     public function getAllUsers () {
         $listeViewUser = parent::getAll();
         if(count($listeViewUser)==0){
@@ -44,10 +46,11 @@ class CUser extends MUser
 }
 
 if (isset($_SESSION["action"])) {
-    $listeViewUser = new CUser();
+    $action = new CUser();
+
     switch ($_SESSION["action"]) {
         case "UsersListe":
-            $listeViewUser->getAllUsers();
+            $action->getAllUsers();
             break;
         case "UserInscription":
             break;
@@ -58,7 +61,7 @@ if (isset($_SESSION["action"])) {
         case "UserProfil":
             break;
         default:
-
     }
+
 }
 ?>

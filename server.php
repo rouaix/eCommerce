@@ -8,6 +8,10 @@
         $_SESSION["page"] = 'accueil';
     }
 
+    if(!isset($_SESSION["action"])){
+        $_SESSION["action"] = 'visite';
+    }
+
     if(!isset($_SESSION["erreur"])){
         $_SESSION["erreur"] = "";
     }
@@ -44,9 +48,7 @@
 
     $route->setController("CUser");
     $route->setAction("UsersListe");
-
     $route->getController();
-
-    $route->getAction();
+    //$route->getAction();
 
 ?>
