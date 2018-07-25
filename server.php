@@ -1,8 +1,15 @@
 <?php
     if(!isset($_SESSION)){session_start();}
 
+
+    /* $_SERVER['REQUEST_METHOD'] */
+
     if(!isset($_SESSION["page"])){
         $_SESSION["page"] = 'accueil';
+    }
+
+    if(!isset($_SESSION["erreur"])){
+        $_SESSION["erreur"] = "";
     }
 
     if (!isset($_SERVER['REQUEST_URI'])) {
@@ -13,7 +20,7 @@
 
     $serveur = $_SERVER['SERVER_NAME'];
 
-    // DS alias de DIRECTORY_SEPARATOR (parce que c'est bien trop long à écrire)
+    // DS alias de DIRECTORY_SEPARATOR (parce que c'est bien trop long à écrire LOL)
     define('DS',DIRECTORY_SEPARATOR);
 
     //Chemin du dossier parent du WEBROOT)
@@ -21,7 +28,7 @@
 
     define('WWW', getenv("HTTP_HOST").$_SERVER['REQUEST_URI']);
 
-    /*
+    /* Vérification
     echo '<p>__DIR__ = '.__DIR__.'</p>';
     echo '<p>__WWW__ = '.WWW.'</p>';
     echo '<p>REQUEST_URI = '.$_SERVER['REQUEST_URI'].'</p>';
@@ -30,7 +37,6 @@
     */
 
     define('PATH_WEB',  __DIR__);
-
     define('PATH_CONTROLLER',   $chemin . DS . 'controllers'. DS);
     define('PATH_VIEW',         $chemin . DS . 'views'. DS);
     define('PATH_MODEL',        $chemin . DS . 'models'. DS);
@@ -38,10 +44,11 @@
     require_once "Route.php";
     $route = new Route();
 
-    $route->getController();
-    $route->getAction();
+    $route->setController("CUser");
+    //$route->setAction("MUser");
 
-    //$route->setController("accueil");
-    require_once PATH_CONTROLLER."ControllerUser.php";
+    $route->getController();
+
+    //$route->getServerAction();
 
 ?>

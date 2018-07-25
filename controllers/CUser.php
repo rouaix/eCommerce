@@ -1,5 +1,5 @@
 <?php
-require_once PATH_MODEL."ModelUser.php";
+require_once PATH_MODEL."MUser.php";
 
 /**
  *
@@ -7,7 +7,7 @@ require_once PATH_MODEL."ModelUser.php";
  *
  */
 
-class ControllerUser extends ModelUser
+class CUser extends MUser
 {
     public function __construct()
     {
@@ -27,20 +27,18 @@ class ControllerUser extends ModelUser
                 $erreur = 'Inscription impossible. ';
             }
         }
-        $content = PATH_VIEW."ViewUserInscription.php";
+        $content = PATH_VIEW."UserInscription.php";
         require_once PATH_VIEW."layout.php";
     }
 
-    /**
-    Appel du modèle pour liste de tous les users
-    */
-    public function getUsers () {
+    /** Appel du modèle pour liste de tous les users */
+    public function getAllUsers () {
         $listeViewUser = parent::getAll();
         if(count($listeViewUser)==0){
             unset($listeViewUser);
             $erreur = "Table vide";
         }
-        $content = PATH_VIEW."ViewUsers.php";
+        $content = PATH_VIEW."UsersListe.php";
         require_once PATH_VIEW."layout.php";
     }
 
@@ -53,9 +51,8 @@ class ControllerUser extends ModelUser
     }
 }
 
-$listeViewUser = new ControllerUser();
-$method = $route->getMethod();
-
+/*
+$method = $route->getServerMethod();
 switch ($method) {
     case "GET":
         $listeViewUser->getUsers();
@@ -63,5 +60,14 @@ switch ($method) {
     case "POST":
         $listeViewUser->getUsers();
         break;
+    default:
+        $listeViewUser->getUsers();
+        break;
 }
+*/
+
+$listeViewUser = new CUser();
+$listeViewUser->getAllUsers();
+
+
 ?>

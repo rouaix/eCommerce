@@ -13,60 +13,44 @@ class Route
     {}
 
     private function formatUrl () {
-        $url = $_SERVER['PATH_INFO'];
-        //$url = $_SERVER['REQUEST_URI'];
-        $urlTrim = trim($url, '/');
-        return explode('/', $urlTrim);
+        /* Modification du traitement des actions pour utilisation des sessions */
     }
 
-    public function getMethod () {
+    public function getServerMethod () {
         return $_SERVER['REQUEST_METHOD'];
+        /* Identification de la methode Get ou POST su serveur*/
+    }
+
+    public function setAction ($action) {
+        $_SESSION["action"]=$action;
     }
 
     public function getAction () {
-        $urlTab = $this->formatUrl();
-        $action = $urlTab[1];
-        if ($action !='') {
-            echo '<p>Action : '.$action.'</p>';
+        if (isset($_SESSION["action"])) {
+            echo '<p>Action : '.$_SESSION["action"].'</p>';
         }else{
-            echo '<p>Aucune action : ('.$_SERVER['REQUEST_URI'].')'.'</p>';
+            $_SESSION["erreur"] .= '<p>Aucune action !</p>';
         }
+    }
+
+    public function setController ($controller) {
+        $_SESSION["class"]=$controller;
     }
 
     public function getController () {
+        $path="";
 
-        $urlTab = $this->formatUrl();
-        $controller = $urlTab[0];
-
-        global $app;
-        $path = PATH_CONTROLLER.$controller.'.php';
+        if (isset($_SESSION["class"])) {
+           $path = PATH_CONTROLLER.$_SESSION["class"].'.php';
+        }
 
         if ( is_file($path) ) {
             require_once $path;
-        }
-        else {
-            require_once PATH_VIEW."404.php";
-            //require_once PATH_VIEW."accueil.php";
-        }
-    }
-
-    public function setController ($action) {
-        global $app;
-        $path = PATH_CONTROLLER.$action.'.php';
-
-        if ( is_file($path) ) {
-            require_once $path;
-        }
-        else {
-            //require_once PATH_VIEW."404.php";
-            require_once PATH_VIEW."accueil.php";
+        }else{
+            $content = PATH_VIEW."404.php";
+            require_once PATH_VIEW."layout.php";
         }
     }
-
-    /**
-     */
-    function __destruct()
-    {}
 }
 
 ?>

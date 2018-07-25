@@ -7,12 +7,10 @@
  *
  */
 
-echo "<hr />Views/ViewUsers.php<br />";
+echo "<hr />Views/UserInscription.php<br />";
 
-    if (isset($listeViewUser)){
-        foreach ($listeViewUser as $user) {
-            echo '<BR />- '.$user["user_nom"];
-        }
+    if (isset(xxx)){
+
     }else{
         if(isset($erreur)){
             echo "<p>".$erreur."</p>";

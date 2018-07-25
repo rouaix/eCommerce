@@ -7,12 +7,8 @@ require_once PATH_MODEL."Model.php";
  * @author Daniel ROUAIX
  *
  */
-class ModelUser extends Model
+class MUser extends Model
 {
-    // TODO - Insert your code here
-
-    /**
-     */
     public function __construct()
     {
 
@@ -31,7 +27,6 @@ class ModelUser extends Model
         }else{
             return true;
         }
-
     }
 
     /** Ajout d'un nouveau user */
@@ -55,18 +50,8 @@ class ModelUser extends Model
         $sql = 'select * from users';
         $query = $db->prepare($sql);
         $query->execute();
-
         $listeViewUser = $query->fetchAll();
         return $listeViewUser;
-    }
-
-
-    /**
-     */
-    function __destruct()
-    {
-
-        // TODO - Insert your code here
     }
 }
 
