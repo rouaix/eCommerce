@@ -73,14 +73,14 @@ class MUser extends Model
 
     public function updateChampUser($id,$champ,$valeur){ /* MAJ d'un champ unique */
         $db = parent::connect();
-        $ql = ' UPDATE user set ('.$champ.' = "'.$valeur.'") WHERE user_id = '.$id.'';
+        $ql = ' UPDATE user set ('.$champ.' = \''.$valeur.'\') WHERE user_id = \''.$id.'\' ';
         $query = $db->prepare($sql);
         $query->execute();
     }
 
     public function readUser($id){
         $db = parent::connect();
-        $sql = 'select * from users where user_id = '".$id."' ';
+        $sql = 'select * from users where user_id = \''.$id.'\'';
         $query = $db->prepare($sql);
         $query->execute();
         $infoUser = $query->fetchAll();
@@ -89,7 +89,7 @@ class MUser extends Model
 
     public function verificationMotDePasseUser($email, $motdepasse){
         $db = parent::connect();
-        $sql = 'select * from users where user_id = '".$id."' limit 1';
+        $sql = 'select * from users where user_id = \''.$id.'\' limit 1';
         $query = $db->prepare($sql);
         $query->execute();
         $infoUser = $query->fetchAll();
