@@ -7,8 +7,6 @@
 class Route
 {
 
-    /**
-     */
     public function __construct()
     {}
 
@@ -30,6 +28,7 @@ class Route
             echo '<p>Action : '.$_SESSION["action"].'</p>';
         }else{
             $_SESSION["erreur"] .= '<p>Aucune action !</p>';
+            echo $_SESSION["erreur"];
         }
     }
 

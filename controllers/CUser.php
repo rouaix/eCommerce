@@ -22,9 +22,9 @@ class CUser extends MUser
             $erreur = 'Adresse mail existante.';
         }else{
             if (parent::insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse)){
-                $message = 'Yeap ! <br /> enregistré ...';
+                $_SESSION["message"] = 'Yeap ! <br /> enregistré ...';
             }else{
-                $erreur = 'Inscription impossible. ';
+                $_SESSION["erreur"] = 'Inscription impossible. ';
             }
         }
         $content = PATH_VIEW."UserInscription.php";
@@ -36,38 +36,29 @@ class CUser extends MUser
         $listeViewUser = parent::getAll();
         if(count($listeViewUser)==0){
             unset($listeViewUser);
-            $erreur = "Table vide";
+            $_SESSION["erreur"] = "Table vide";
         }
         $content = PATH_VIEW."UsersListe.php";
         require_once PATH_VIEW."layout.php";
     }
+}
 
-    /**
-     */
-    function __destruct()
-    {
+if (isset($_SESSION["action"])) {
+    $listeViewUser = new CUser();
+    switch ($_SESSION["action"]) {
+        case "UsersListe":
+            $listeViewUser->getAllUsers();
+            break;
+        case "UserInscription":
+            break;
+        case "UserLogout":
+            break;
+        case "UserLogin":
+            break;
+        case "UserProfil":
+            break;
+        default:
 
-        // TODO - Insert your code here
     }
 }
-
-/*
-$method = $route->getServerMethod();
-switch ($method) {
-    case "GET":
-        $listeViewUser->getUsers();
-        break;
-    case "POST":
-        $listeViewUser->getUsers();
-        break;
-    default:
-        $listeViewUser->getUsers();
-        break;
-}
-*/
-
-$listeViewUser = new CUser();
-$listeViewUser->getAllUsers();
-
-
 ?>
