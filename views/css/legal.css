@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
+
+/*________________________________TAG________________________________*/
+html{
+	font-family: 'Roboto', sans-serif;
+	width: 100%; height: 100%;
+}
+
+body{
+	width: 100%; height: 100%;
+	margin:0; padding:0;
+}
+
+div .bgPhoto{
+	width: 100%;
+	text-align: center;
+}
+
+#legal{
+	margin-bottom: 15%;
+	margin-top: 15%;
+}
+
+#legal img{
+	width: 50%;
+}
+
+#legal a{
+	color:#da172a;
+}
+
+#legal a:hover{
+	color:#da172a;
+	text-decoration: none;
+}
+
+#legal h1{
+	text-align: center;
+}
+
+#legal h4{
+	text-align: center;
+	margin-top: 10%;
+	border-bottom: 1px solid #2c353b;
+
+}
+
+#legal div .main{
+	display: inline-block;
+	margin-bottom: 15%;
+}
+
+#legal div .sub{
+	width: 100%;
+}
+
+#legal p{
+	font-weight: 300;
+	line-height: 1.5em;
+}
