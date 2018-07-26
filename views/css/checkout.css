@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
+
+/*________________________________TAG________________________________*/
+html{
+	font-family: 'Roboto', sans-serif;
+	width: 100%; height: 100%;
+}
+
+body{
+	width: 100%; height: 100%;
+	margin:0; padding:0;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus, select.slct:focus{
+  border-color: #da172a;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+option:hover{
+	background-color: #da172a!important;
+	color: blue;
+	border-color: #da172a;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+span{
+	color: #da172a;
+}
+
+h3{
+	width: 100%;
+	margin: 2% 2% 7% 2%;
+}
+
+
+/*________________________________CLASS________________________________*/
+.dataUser{
+
+}
+
+
+.form-group{
+	width: 40%;
+}
+
+.form-control{
+	border-radius: 0;
+}
+
+.headPanier{
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.recapPanier{
+}
+
+.recapPanier .row{
+
+}
+
+.detailPanier{
+	border-top:1px solid #2c353b;
+
+}
+
+.headPanier .col-sm-6{
+	margin: 0; padding: 0;
+
+}
+
+.totalPanier{
+	margin-top: 10%;
+	border-top:1px solid #2c353b;
+}
+
+div .row .Colright{
+	margin: 0; padding: 0;
+}
+
+.Colright p, .headPanier .Colright p{
+	width: 100%;
+	color: #2c353b;
+	text-align: right;
+}
+
+div .row .ColLeft{
+	font-weight: bold;
+	margin: 0; padding: 0;
+}
+
+div .headPanier .col-sm-6 p, div .row .Colright p, div .row .ColLeft p{
+	margin: 0; padding: 0;
+	margin-top: 5%;
+}
+
+div .BformReview{
+text-align: center;
+}
+
+/*________________________________ID________________________________*/
+
+
+#dataProfil{
+	background-color: none;
+	width: 100%;
+	display: inline-block;
+	border-bottom:1px solid #2c353b;
+
+}
+
+#dataAddress{
+	background-color: none;
+	width: 100%;
+	display: inline-block;
+	border-bottom:1px solid #2c353b;
+
+}
+
+#dataBank{
+	background-color: none;
+	width: 100%;
+	display: inline-block;
+	border-bottom:1px solid #2c353b;
+
+}
+
+
+
+
+/*________________________________OTHER________________________________*/
+
+form{
+margin: 1%;
+}
+
+
+button{
+	width: 50%;
+	border-style: none;
+	background-color: #c1c1c1c1;
+}
+button:hover{
+	background-color: #2c353b;
+	border-color: #2c353b;
+	color: white;
+ }
+
+
+ .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #da172a!important;
+}
+input .form-control :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #da172a!important;
+   opacity:  1;
+}
+input .form-control ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #da172a!important;
+   opacity:  1;
+}
+input .form-control :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #da172a!important;
+}
+input.form-control ::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #da172a!important;
+}
+
+input .form-control ::placeholder { /* Most modern browsers support this now. */
+   color:    #da172a!important;
+}
+
+input, button{
+	box-sizing: border-box;
+	border: 3px solid #c1c1c1c1;
+	-webkit-transition: 0.55s;
+	transition: 0.55s;
+	outline: none;
+}
+
+
+

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,700');
+
+
+/*________________________________TAG________________________________*/
+html{
+	font-family: 'Zilla Slab', serif;
+	width: 100%; height: 100%;
+}
+
+body{
+	width: 100%; height: 100%;
+	margin:0; padding:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+	margin: 0; padding: 0;
+	overflow: hidden;
+	background-color: white;
+	width: 100%;
+	border-bottom: 1px solid #8c8c8c8c;
+}
+
+li{
+	font-family: 'Zilla Slab', serif;
+	float: left;
+}
+
+li a, .dropbtn{
+	display: inline-block;
+	color: #010101;
+	text-align: center;
+	padding: 14px 16px;
+}
+
+li a:hover, .dropdown:hover.dropbtn{
+	background-color: #8c8c8c8c;
+}
+
+img{
+	width: 1000%;
+}
+
+/*________________________________ID________________________________*/
+
+
+#navbar{
+	position: sticky; top: 0;
+	position: -webkit-sticky;
+	margin: 1%;
+}
+
+
+/*________________________________CLASS________________________________*/
+.active{
+	background-color: none;
+}
+
+.menu-right{
+	float: right;
+	margin-right: 10px;
+}
+
+li.dropdown{
+	display: inline-block;
+}
+
+.dropbtn{
+
+}
+
+.dropdown-content{
+	display: none;
+	opacity: 0;
+	position: absolute;
+	background-color: white;
+	min-height: 160px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+animation: drop 1s forwards;
+display: block;
+}
+
+.dropdown-content a{
+	color:  #010101;
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover{ background-color: #8c8c8c8c; }
+
+.dropdown-content:hover{
+
+}
+
+
+
+
+/*________________________________ANIMATION________________________________*/
+@keyframes drop{
+	0%{ transform: translateX(-100%);  }
+	100%{ opacity: 1;
+		transform: translateX(0%);}
+}
+
+
+.dropdown-content a:first-child{
+	animation-delay: 0;
+}
+
+.dropdown-content a:nth-child(2){
+	animation-delay: 0.5s;
+
+}
+
+.dropdown-content a:nth-child(3){
+	animation-delay: 1s;
+
+}
+
+.dropdown-content a:last-child{
+	animation-delay: 1.5s;
+
+}
+
+/*BOOTSTRAP*/
