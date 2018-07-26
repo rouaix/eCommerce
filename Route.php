@@ -25,10 +25,9 @@ class Route
 
     public function getAction () {
         if (isset($_SESSION["action"])) {
-            echo '<p>Action : '.$_SESSION["action"].'</p>';
+            $_SESSION["message"] .='<p>Action : '.$_SESSION["action"].'</p>';
         }else{
             $_SESSION["erreur"] .= '<p>Aucune action !</p>';
-            echo $_SESSION["erreur"];
         }
     }
 
@@ -46,8 +45,8 @@ class Route
         if ( is_file($path) ) {
             require_once $path;
         }else{
-            $content = PATH_VIEW."404.php";
-            require_once PATH_VIEW."content.php";
+            return $content = PATH_VIEW."404.php";
+            //require_once PATH_VIEW."layout.php";
         }
     }
 }

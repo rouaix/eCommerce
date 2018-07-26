@@ -15,4 +15,4 @@ require_once PATH_VIEW."inscription.view.php";
     }
 
 
-?>
+

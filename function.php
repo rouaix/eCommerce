@@ -1,5 +1,33 @@
 <?php
 
+function getPage(){
+    require_once "route.php";
+    $route = new Route();
+
+    $route->setController("CUser");
+    $route->setAction("UsersListe");
+
+    $route->getController();
+    $route->getAction();
+
+    switch ($_SESSION["page"]) {
+        case "accueil":
+            //$_SESSION["action"]->
+                getAllUsers();
+            break;
+        case "user":
+            break;
+        case "article":
+            break;
+        case "inscription":
+            break;
+        case "article":
+            break;
+        default:
+    }
+    require_once PATH_VIEW."layout.php";
+}
+
 function getErreur(){
     $html = "";
     if($_SESSION["erreur"] != ""){

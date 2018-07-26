@@ -11,15 +11,15 @@
             </li>
 
             <li class="nav-item iconNavBar">
-                <a class="nav-link" href="#1"><img src="./media/icone/favoris.png"></a>
+                <a class="nav-link" href="#1"><img src="./views/media/icone/favoris.png"></a>
             </li>
 
             <li class="nav-item iconNavBar">
-                <a class="nav-link" href="#"><img src="./media/icone/login.png"></a>
+                <a class="nav-link" href="#"><img src="./views/media/icone/login.png"></a>
             </li>
 
             <li class="nav-item iconNavBar">
-                <a class="nav-link" href="#"><img src="./media/icone/panier.png"></a>
+                <a class="nav-link" href="#"><img src="./views/media/icone/panier.png"></a>
             </li>
         </ul>
     </div>

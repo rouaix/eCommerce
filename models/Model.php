@@ -12,7 +12,7 @@ class Model
     private $mdp = "genius371524";
     private $bdd = "ecommerce";
     private $port = "3306";
-    private $host = "localhost";
+    private $host = "127.0.0.1";
 
     public function __construct()
     {
@@ -28,7 +28,7 @@ class Model
             return $db;
         }
         catch (PDOException $e) {
-            $error = $e->getCode().' '.$e->getMessage();
+            $_SESSION["erreur"] = $e->getCode().' '.$e->getMessage();
             include PATH_VIEW.'500.php';
             die();
         }

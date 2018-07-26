@@ -45,10 +45,27 @@
 
     require_once "route.php";
     $route = new Route();
+
     $route->setController("CUser");
     $route->setAction("UsersListe");
 
     $route->getController();
-    //$route->getAction();
+    $route->getAction();
 
+    switch ($_SESSION["page"]) {
+        case "accueil":
+            $cuser = new CUser();
+            $cuser->getAllUsers();
+            break;
+        case "user":
+            break;
+        case "article":
+            break;
+        case "inscription":
+            break;
+        case "article":
+            break;
+        default:
+    }
+    require_once PATH_VIEW."layout.php";
 ?>

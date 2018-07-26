@@ -24,7 +24,7 @@ $(document).ready(function(){
 </script>
 
 <div class="logoLogin">
-	<img src="./media/logo/logo_1.png">
+	<img src="./views/media/logo/logo_1.png">
 </div>
 
 	<form method="POST" action="">
