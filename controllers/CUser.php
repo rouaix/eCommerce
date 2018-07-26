@@ -41,7 +41,7 @@ class CUser extends MUser
             $_SESSION["erreur"] = "Table vide";
         }
         $content = PATH_VIEW."UsersListe.php";
-        require_once PATH_VIEW."layout.php";
+        require_once PATH_VIEW."content.php";
     }
 }
 

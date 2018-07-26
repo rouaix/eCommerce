@@ -38,7 +38,7 @@ div.row{
 /*____________________________BANNIER DE CATÉGORIE____________________________*/
 div.baniereCat{
 	height: 8em;
-	background-image: url('./media/test.webp');
+	background-image: url('./views/media/test.webp');
 	background-size: cover;
 
 

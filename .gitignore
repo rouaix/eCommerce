@@ -1,0 +1,7 @@
+/vendor/
+/.git/
+/nbproject/
+/composer.json
+/composer.lock
+/composer.phar
+/.gitignore

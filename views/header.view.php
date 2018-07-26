@@ -12,8 +12,8 @@
 <title>E-commerce</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-<meta name="author" content="Daniel ROUAIX">
-<meta name="copyright" content="&copy; 2018 ROUAIX.net">
+<meta name="author" content="Daniel & Régis">
+<meta name="copyright" content="2018">
 <meta name="keywords" content="boutique, photographie, banque de photos, Plan de Cuques, Marseille">
 
 <!-- Début Section OG -->

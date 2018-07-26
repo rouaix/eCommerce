@@ -45,9 +45,9 @@
 
     require_once "route.php";
     $route = new Route();
-
     $route->setController("CUser");
     $route->setAction("UsersListe");
+
     $route->getController();
     //$route->getAction();
 

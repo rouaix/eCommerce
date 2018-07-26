@@ -47,7 +47,7 @@ class Route
             require_once $path;
         }else{
             $content = PATH_VIEW."404.php";
-            require_once PATH_VIEW."layout.php";
+            require_once PATH_VIEW."content.php";
         }
     }
 }
