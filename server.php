@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION)){session_start();}
-
+    require_once("function.php");
 
     // $_SERVER['REQUEST_METHOD']
 
@@ -43,7 +43,7 @@
     define('PATH_VIEW',         $chemin . DS . 'views'. DS);
     define('PATH_MODEL',        $chemin . DS . 'models'. DS);
 
-    require_once "Route.php";
+    require_once "route.php";
     $route = new Route();
 
     $route->setController("CUser");

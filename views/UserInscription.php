@@ -7,16 +7,12 @@
  *
  */
 
-echo "<hr />Views/UserInscription.php<br />";
+require_once PATH_VIEW."inscription.view.php";
 
     if (isset(xxx)){
+        require_once PATH_VIEW."inscription.view.php";
 
-    }else{
-        if(isset($erreur)){
-            echo "<p>".$erreur."</p>";
-            unset($erreur);
-        }
     }
 
-echo "<hr />";
+
 ?>
