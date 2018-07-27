@@ -4,7 +4,7 @@ require_once PATH_MODEL."Model.php";
 
 /**
  *
- * @author Daniel ROUAIX
+ * @author Daniel ROUAIX 2018
  *
  */
 class MUser extends Model
@@ -15,7 +15,7 @@ class MUser extends Model
         // TODO - Insert your code here
     }
 
-    /** Vérification de la présence de l'adresse mail pour les nouveaux users*/
+    /* Vérification de la présence de l'adresse mail pour les nouveaux users */
     public function userExiste($user_email){
         $db = parent::connect();
         $ql = 'select * from users where user_email = \'$user_email\' ';
@@ -32,7 +32,7 @@ class MUser extends Model
     /* Ajout d'un nouveau user */
     public function insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse){
         $db = parent::connect();
-        $ql = ' INSERT
+        $sql = ' INSERT
                 INTO users (user_id,user_nom,user_prenom,user_email,user_motdepasse)
                 VALUES (?,?,?,?,?,?)';
         $query = $db->prepare($sql);
@@ -47,7 +47,7 @@ class MUser extends Model
 
     public function deleteUser($id){
         $db = parent::connect();
-        $ql = ' DELETE * FROM users WHERE user_id = '.$id.'';
+        $sql = ' DELETE * FROM users WHERE user_id = '.$id.'';
         $query = $db->prepare($sql);
         $query->execute();
     }
@@ -73,7 +73,7 @@ class MUser extends Model
 
     public function updateChampUser($id,$champ,$valeur){ /* MAJ d'un champ unique */
         $db = parent::connect();
-        $ql = ' UPDATE user set ('.$champ.' = \''.$valeur.'\') WHERE user_id = \''.$id.'\' ';
+        $sql = ' UPDATE user set ('.$champ.' = \''.$valeur.'\') WHERE user_id = \''.$id.'\' ';
         $query = $db->prepare($sql);
         $query->execute();
     }
