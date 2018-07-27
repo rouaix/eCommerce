@@ -54,7 +54,7 @@ class MUser extends Model
 
     public function updateUser($tableau){ /* Utilise un tableau type champ= valeur */
         $db = parent::connect();
-        $ql = 'UPDATE user set (';
+        $sql = 'UPDATE user set (';
         foreach($tableau as $key => $value){
             if ($key != 'user_id') {
                 if($value !=""){
