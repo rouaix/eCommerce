@@ -73,7 +73,7 @@
             <!-- Grid column -->
             <div class="col-md-7 col-lg-8">
                 <!--Copyright-->
-                <p class="text-center text-md-left"><strong>© 2018 Copyright: </strong>Clara Lafuente Photographie- Artiste photographe professionnelle- Marseille- Les images présentés ne sont pas libres de droit et sont la propriété exclusive de Clara Lafuente Photographie. Toute diffusion, reproduction, ou modification ne peut se faire sans l'accord préalable de l'auteur.</p>
+                <p class="text-center text-md-left"><strong>© 2018 Copyright: </strong>Clara Lafuente Photographie - Artiste photographe professionnelle - Marseille - Les images présentés ne sont pas libres de droit et sont la propriété exclusive de Clara Lafuente Photographie. Toute diffusion, reproduction, ou modification ne peut se faire sans l'accord préalable de l'auteur.</p>
             </div>
             <!-- Grid column -->
 

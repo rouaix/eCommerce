@@ -1,5 +1,3 @@
 <?php
-
-echo "Erreur 404 : Cette page n'existe pas => ";
-
+    echo "Erreur 404 => ".getCodeErreurHTTP("404");
 ?>

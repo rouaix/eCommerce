@@ -43,6 +43,7 @@
     define('PATH_VIEW',         $chemin . DS . 'views'. DS);
     define('PATH_MODEL',        $chemin . DS . 'models'. DS);
 
+    /*
     require_once "route.php";
     $route = new Route();
 
@@ -68,4 +69,7 @@
         default:
     }
     require_once PATH_VIEW."layout.php";
+    */
+
+    getPage();
 ?>

@@ -1,3 +1,3 @@
 <?php
-    echo "Erreur Bdd !";
+    echo "Erreur 500 => ".getCodeErreurHTTP("500");
 ?>

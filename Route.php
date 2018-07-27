@@ -19,27 +19,27 @@ class Route
         /* Identification de la methode Get ou POST su serveur*/
     }
 
-    public function setAction ($action) {
-        $_SESSION["action"]=$action;
+    public function setView ($action) {
+        $_SESSION["view"]=$action;
     }
 
-    public function getAction () {
-        if (isset($_SESSION["action"])) {
-            $_SESSION["message"] .='<p>Action : '.$_SESSION["action"].'</p>';
+    public function getView () {
+        if (isset($_SESSION["view"])) {
+            $_SESSION["message"] .='<p>View : '.$_SESSION["view"].'</p>';
         }else{
-            $_SESSION["erreur"] .= '<p>Aucune action !</p>';
+            $_SESSION["erreur"] .= '<p>Aucune vue !</p>';
         }
     }
 
     public function setController ($controller) {
-        $_SESSION["class"]=$controller;
+        $_SESSION["controller"]=$controller;
     }
 
     public function getController () {
         $path="";
 
-        if (isset($_SESSION["class"])) {
-           $path = PATH_CONTROLLER.$_SESSION["class"].'.php';
+        if (isset($_SESSION["controller"])) {
+           $path = PATH_CONTROLLER.$_SESSION["controller"].'.php';
         }
 
         if ( is_file($path) ) {

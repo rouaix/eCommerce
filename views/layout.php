@@ -18,7 +18,7 @@
         echo getAlerte();
     ?>
             <hr />
-            <?php require_once $content; ?>
+            <?php require_once $content ?>
             <hr />
             <?php require_once PATH_VIEW."footer.view.php"; ?>
             <?php require_once PATH_VIEW."body.end.script.view.php"; ?>

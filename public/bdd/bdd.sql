@@ -209,7 +209,6 @@ CREATE TABLE dimensionner(
         article_id Int NOT NULL ,
         taille_id  Int NOT NULL
 	,CONSTRAINT dimensionner_PK PRIMARY KEY (article_id,taille_id)
-
 	,CONSTRAINT dimensionner_articles_FK FOREIGN KEY (article_id) REFERENCES articles(article_id)
 	,CONSTRAINT dimensionner_tailles0_FK FOREIGN KEY (taille_id) REFERENCES tailles(taille_id)
 )ENGINE=InnoDB;
@@ -229,4 +228,3 @@ CREATE TABLE commenter(
 	,CONSTRAINT commenter_commentaires0_FK FOREIGN KEY (commentaire_id) REFERENCES commentaires(commentaire_id)
 	,CONSTRAINT commenter_users1_FK FOREIGN KEY (user_id) REFERENCES users(user_id)
 )ENGINE=InnoDB;
-
