@@ -27,7 +27,7 @@ class CUser extends MUser
                 $_SESSION["erreur"] = 'Inscription impossible. ';
             }
         }
-        $content = PATH_VIEW.$_SESSION["action"].".php";
+        $content = PATH_VIEW.$_SESSION["view"].".php";
         require_once PATH_VIEW."layout.php";
     }
 
@@ -40,17 +40,18 @@ class CUser extends MUser
             unset($listeViewUser);
             $_SESSION["erreur"] = "Table vide";
         }
-        $content = PATH_VIEW.$_SESSION["action"].".php";
+        $content = PATH_VIEW.$_SESSION["view"].".php";
         require_once PATH_VIEW."layout.php";
     }
 }
 
-if (isset($_SESSION["action"])) {
+/*
+if (isset($_SESSION["view"])) {
     $action = new CUser();
 
-    switch ($_SESSION["action"]) {
+    switch ($_SESSION["view"]) {
         case "UsersListe":
-            //$content->getAllUsers();
+            $content->getAllUsers();
             break;
         case "UserInscription":
             break;
@@ -64,4 +65,6 @@ if (isset($_SESSION["action"])) {
     }
 
 }
+*/
+
 ?>
