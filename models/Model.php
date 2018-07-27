@@ -8,16 +8,16 @@
  */
 class Model
 {
-    private $user = "root";
-    private $mdp = "genius371524";
-    private $bdd = "ecommerce";
-    private $port = "3306";
+    private $user = "";
+    private $mdp = "";
+    private $bdd = "";
+    private $port = "";
     private $host = "127.0.0.1";
 
     public function __construct()
     {
          /**
-         * Constructeur avec vérification si usage local ou en ligne
+         * Constructeur avec vÃ©rification si usage local ou en ligne
          */
     }
 
