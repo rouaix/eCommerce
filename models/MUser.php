@@ -18,7 +18,7 @@ class MUser extends Model
     /* Vérification de la présence de l'adresse mail pour les nouveaux users */
     public function userExiste($user_email){
         $db = parent::connect();
-        $ql = 'select * from users where user_email = \'$user_email\' ';
+        $sql = 'select * from users where user_email = \'$user_email\' ';
         $query = $db->prepare($sql);
         $query->execute();
         $verif = $query->fetchAll();
