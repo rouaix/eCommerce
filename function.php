@@ -11,7 +11,9 @@ function getPage(){
 
     if (!isset($_SESSION["user"])){
 		$route->setController("CUser");
-		$route->setAction("login");
+		if (!isset($_SESSION["action"])){
+			$route->setAction("login");
+		}
 		$route->getView();
     }else{
 

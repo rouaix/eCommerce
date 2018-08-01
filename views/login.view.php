@@ -7,7 +7,7 @@ if(isset($_SESSION["action"])){
 	if($_SESSION["action"]=="login"){
 		?>
 	<div class="logoLogin"><img src="./views/media/logo/logo_1.png"></div>
-	<div>
+	<div> <a href="<?php echo WWW; ?>?action=inscription" title="Inscription">Pour vous inscrire cliquez ici !</a>
 		<form method="POST" action="">
 			<input class="form-control" id="email" type="email" name="email" placeholder="Email *" />
 			<br>

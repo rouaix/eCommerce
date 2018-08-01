@@ -4,13 +4,14 @@
     if(count($_GET)){
         while (list($key, $val) = each($_GET)){
         	$_SESSION[$key]= $val;
+		}
         unset($_GET);
     }
 
     if(count($_POST)){
         while (list($key, $val) = each($_POST)){
            	$_SESSION[$key]= $val;
-        }
+		}
         unset($_POST);
     }
 
