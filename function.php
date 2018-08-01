@@ -1,21 +1,29 @@
 <?php
 
+
 /* Fonction de gestion des pages */
 function getPage(){
     require_once "Route.php";
     $route = new Route();
 
     // Charge la class controller et la vue définie
-    $route->setController("CUser");
-    $route->setView("UsersListe");
-    $route->getController();
+
+
+    if (!isset($_SESSION["user"])){
+		$route->setController("CUser");
+		$route->setAction("login");
+		$route->getView();
+    }else{
+
+    }
+
     // Fin ---
+
 
 
     switch ($_SESSION["page"]) {
         case "accueil":
-            $cuser = new CUser();
-            $cuser->getAllUsers();
+
             break;
         case "user":
             break;
