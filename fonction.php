@@ -2,13 +2,13 @@
 if(!isset($_SESSION)){session_start();}
 
     if(isset($_SESSION["action"])){
-		
+
       switch ($_SESSION["action"]) {
           case "newuser":
 			  $route = new Route();
 			  $route->setController("CUser");
 			  $route->getController ();
-			  
+
               $cuser = new CUser();
               $cuser->setUser($_SESSION["user_nom"],$_SESSION["user_prenom"],$_SESSION["user_email"],$_SESSION["user_motdepasse"]);
               unset($_SESSION["user_nom"]);
@@ -24,21 +24,21 @@ if(!isset($_SESSION)){session_start();}
 			  $route = new Route();
 			  $route->setController("CUser");
 			  $route->getController ();
-			  
+
 			  $cuser = new CUser();
 			  if($user->loginUsers ($_SESSION["user_email"],$_SESSION["user_motdepasse"])){
 				$route->setAction("accueil");
 			  }
               unset($_SESSION["user_email"]);
               unset($_SESSION["user_motdepasse"]);
-			  
+
               break;
           case "accueil":
 			  $route->setView("accueil");
-              break;			  
+              break;
           default:
       }
-		
+
     }else{
 		/*----------------A définir-----------------*/
 	}

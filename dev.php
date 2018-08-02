@@ -13,9 +13,9 @@
 
 	$cuser = new CUser();
 	$ligne = $cuser->getAllUsers();
- 	//if($ligne){ 
-		//foreach($ligne as $key => $val){ 
+ 	//if($ligne){
+		//foreach($ligne as $key => $val){
 			//echo $key." = ".$val."<br />"; } }
-	
+
 ?>
 </div>
