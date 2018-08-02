@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="../views/css/inscription.css">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
 		$("#toggle").change(function () {
@@ -20,7 +18,7 @@
 	});
 </script>
 <div class="logoLogin">
-	<a href="../index.php"> <img src="../views/media/logo/logo_1.png"></a>
+	<a href="../index.php"> <img src="views/media/logo/logo_1.png"></a>
 </div>
 <form method="POST" action="">
 	<input class="form-control" id="nom" type="text" name="user_nom" placeholder="Nom *" />

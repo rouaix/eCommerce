@@ -79,7 +79,7 @@ class MUser extends Model
         $sql = "select * from users where user_id ='".$id."'";
         $query = $db->prepare($sql);
         $query->execute();
-        $infoUser = $query->fetchAll();
+        $infoUser[0] = $query->fetchAll();
         return $infoUser;
     }
 
@@ -89,17 +89,18 @@ class MUser extends Model
         $query = $db->prepare($sql);
         $query->execute();
         $infoUser = $query->fetchAll();
-        return $infoUser;
+        return $infoUser[0];
     }
 
     public function verificationMotDePasseUser($email, $motdepasse){
         $db = parent::connect();
-        $sql = "select * from users where user_email ='".$email."' limit 1 ";
+        $sql = "select * from users where user_email ='".$email."'";
         $query = $db->prepare($sql);
         $query->execute();
         $infoUser = $query->fetchAll();
 
-        if (password_verify ($motdepasse , $infoUser["user_motdepasse"])){
+		if ($motdepasse = $infoUser[0]["user_motdepasse"]){
+        //if (password_verify ($motdepasse , $infoUser["user_motdepasse"])){
             return true;
         }else{
             return false;

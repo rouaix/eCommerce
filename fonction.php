@@ -1,71 +1,82 @@
 <?php
 if(!isset($_SESSION)){session_start();}
 
+
     if(isset($_SESSION["action"])){
-
-      switch ($_SESSION["action"]) {
+		switch ($_SESSION["action"] ) {
           case "newuser":
-			  $route = new Route();
-			  $route->setController("CUser");
-			  $route->getController ();
 
-              $cuser = new CUser();
-              $cuser->setUser($_SESSION["user_nom"],$_SESSION["user_prenom"],$_SESSION["user_email"],$_SESSION["user_motdepasse"]);
-              unset($_SESSION["user_nom"]);
-              unset($_SESSION["user_prenom"]);
-              unset($_SESSION["user_email"]);
-              unset($_SESSION["user_motdepasse"]);
-              $route->setAction("login");
+            $cuser = new CUser();
+     		$cuser->setUser($_SESSION["user_nom"], $_SESSION["user_prenom"], $_SESSION["user_email"], $_SESSION["user_motdepasse"]);
+
+              $act->setAction("login");
               break;
           case "inscription":
-              $route->setAction("inscription");
+              $act->setAction("inscription");
+              break;
+          case "login":
+			  $act->setAction("login");
               break;
           case "loginuser":
-			  $route = new Route();
-			  $route->setController("CUser");
-			  $route->getController ();
-
 			  $cuser = new CUser();
-			  if($user->loginUsers ($_SESSION["user_email"],$_SESSION["user_motdepasse"])){
-				$route->setAction("accueil");
-			  }
-              unset($_SESSION["user_email"]);
-              unset($_SESSION["user_motdepasse"]);
 
+			if($cuser->loginUsers ($_SESSION["user_email"],$_SESSION["user_motdepasse"])){
+              	unset($_SESSION["user_email"]);
+              	unset($_SESSION["user_motdepasse"]);
+				$act->setAction("accueil");
+			  }else{
+				$act->setAction("login");
+			  }
               break;
           case "accueil":
-			  $route->setView("accueil");
+				$act->setAction("accueil");
               break;
+		  case "logout":
+				session_destroy();
+				echo "<script type='text/javascript'>document.location.replace('/');</script>";
+				break;
+          case "panier":
+			  $act->setAction("panier");
+              break;
+          case "favoris":
+			  $act->setAction("favoris");
+              break;
+			case "shop":
+				$act->setAction("shop");
+			break;
           default:
-      }
-
-    }else{
-		/*----------------A définir-----------------*/
-	}
+			//$route->setAction("shop");
+      	}
+    }
 
 /* Fonction de gestion des pages */
 function getPage(){
 	$route = new Route();
+	$act = new Controller();
+
     switch ($_SESSION["page"]) {
         case "accueil":
             // Charge la class controller et la vue définie
             if (!isset($_SESSION["user"])){
-          		  $route->setController("CUser");
-          		  if (!isset($_SESSION["action"])){
-          			 $route->setAction("login");
-          		  }else{
-                  $route->setAction($_SESSION["action"]);
+          		if (!isset($_SESSION["action"])){
+          			 $act->setAction("login");
+          		}else{
+                  	$act->setAction($_SESSION["action"]);
                 }
-        		  $route->getView();
             }else{
-
+				$act->setAction("accueil");
             }
             break;
-        case "":
+        case "shop":
+			$act->setAction("shop");
+            break;
+        case "cherche":
+			$act->setAction("cherche");
             break;
         default:
-			$route->getView();
+			$act->setAction("accueil");
     }
+	$route->getView();
 }
 
 /* Liste de codes erreurs */

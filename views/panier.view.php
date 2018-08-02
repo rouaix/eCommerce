@@ -1,6 +1,3 @@
-<link rel="stylesheet" type="text/css" href="../views/css/panier.css">
-
-<?php include('../views/nav.view.php');?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -72,4 +69,3 @@
 		</div>
 	</div>
 </div>
-<?php include('../views/footer.view.php'); ?>

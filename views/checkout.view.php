@@ -1,8 +1,3 @@
-<?php include('../views/nav.view.php');?>
-
-<link rel="stylesheet" type="text/css" href="../views/css/checkout.css">
-
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#NomShip, #PrenomShip, #TelShip,#AddShip, #AddShip2, #CityShip, #CPShip, #PaysShip").attr('disabled', true);
@@ -223,5 +218,3 @@
 		</div>
 	</div>
 </div>
-
-<?php include('../views/footer.view.php');?>

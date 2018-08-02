@@ -3,21 +3,49 @@
 
     if(count($_GET)){
 		foreach($_GET as $key => $val){
-        	$_SESSION[$key]= $val;
+			if ($key == "user_motdepasse" || $key == "password"){
+				$val = password_hash($val, PASSWORD_DEFAULT);
+			}
+			if($key == "controller" || $key == "action" || $key == "view"){
+				if(!is_array($_SESSION[$key])){
+					$x = $_SESSION[$key];
+					$_SESSION[$key] = array($x);
+					array_push($_SESSION[$key], $val);
+				}else{
+					array_push($_SESSION[$key], $val);
+				}
+			}else{
+        		$_SESSION[$key]= $val;
+			}
 		}
         unset($_GET);
+		echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
     }
 
     if(count($_POST)){
 		foreach($_POST as $key => $val){
-           	$_SESSION[$key]= $val;
+			if ($key == "user_motdepasse" || $key == "password"){
+				$val = password_hash($val, PASSWORD_DEFAULT);
+			}
+			if($key == "controller" || $key == "action" || $key == "view"){
+				if(!is_array($_SESSION[$key])){
+					$x = $_SESSION[$key];
+					$_SESSION[$key] = array($x);
+					array_push($_SESSION[$key], $val);
+				}else{
+					array_push($_SESSION[$key], $val);
+				}
+			}else{
+        		$_SESSION[$key]= $val;
+			}
 		}
         unset($_POST);
+		echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
     }
 
     foreach ($_SESSION as $key => $value) {
       if($value == ""){
-        unset($_SESSION[$key]);
+        //unset($_SESSION[$key]);
       }
     }
 
@@ -61,9 +89,21 @@
         $_SERVER['REQUEST_URI'] = '';
     }
 
-    require_once("Route.php");
-	$route = new Route();
 
+    require_once("Route.php");
+	require_once PATH_CONTROLLER."Controller.php";
+	require_once PATH_CONTROLLER."CUser.php";
+
+ 	global $route;
+ 	$route = new Route();
+
+	global $action;
+	$act = new Controller();
+
+
+
+	require_once ("fonction.php");
     getPage();
+	$route->getView();
 
 ?>

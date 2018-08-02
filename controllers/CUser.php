@@ -22,9 +22,11 @@ class CUser extends MUser
             $erreur = 'Adresse mail existante.';
         }else{
             parent::insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse);
+			unset($_SESSION["user_nom"]);
+            unset($_SESSION["user_prenom"]);
+            unset($_SESSION["user_email"]);
+            unset($_SESSION["user_motdepasse"]);
         }
-        //$content = PATH_VIEW.$_SESSION["view"].".php";
-        //require_once PATH_VIEW."layout.php";
     }
 
     /*
@@ -46,9 +48,12 @@ class CUser extends MUser
 	public function loginUsers ($email,$motdepasse) {
 		if (parent::verificationMotDePasseUser($email, $motdepasse)){
 			$_SESSION["user"] = parent::readUserEmail($email);
+			$_SESSION["alerte"] .= "Connecté";
 			return true;
 		}else{
+			$_SESSION["alerte"] .= "Non connecté";
 			return false;
+
 		}
 	}
 }
