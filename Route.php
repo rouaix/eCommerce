@@ -4,6 +4,11 @@
  * @author Daniel
  *
  */
+ global $route;
+ $route = new Route();
+
+require_once ("fonction.php");
+
 class Route
 {
 
@@ -20,8 +25,10 @@ class Route
     }
 
     public function setAction($action){
-        $_SESSION["action"]=$action;
-		$this->setView($action.".view");
+      if($action!=""){
+          $_SESSION["action"]=$action;
+		  $this->setView($action.".view");
+      }
     }
 
     public function getAction($action){
@@ -34,23 +41,22 @@ class Route
 
     public function getView () {
         if (isset($_SESSION["view"])) {
-			$path = PATH_VIEW.$_SESSION["view"].'.php';
-			if ( is_file($path) ) {
-				$content = $path;
-				require_once PATH_VIEW."layout.php";
-			}else{
-				return $content = PATH_VIEW."404.php";
-				require_once PATH_VIEW."layout.php";
-			}
-
+    			$path = PATH_VIEW.$_SESSION["view"].'.php';
+    			if ( is_file($path) ) {
+    				$content = $path;
+    				require_once PATH_VIEW."layout.php";
+    			}else{
+    				return $content = PATH_VIEW."404.php";
+    				require_once PATH_VIEW."layout.php";
+    			}
         }else{
-            $_SESSION["erreur"] .= '<p>Aucune vue !</p>';
+            $_SESSION["erreur"] = '<p>Aucune vue !</p>';
         }
     }
 
     public function setController ($controller) {
         $_SESSION["controller"]=$controller;
-		$this->getController();
+		      $this->getController();
     }
 
     public function getController () {
