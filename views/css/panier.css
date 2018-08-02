@@ -1,0 +1,51 @@
+.line{
+	border-top: 1px solid black;
+}
+
+.infoImgPanier{
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+}
+
+ .imgPanier img {
+	width: 100%;
+}
+
+.infoImgPanier .InfoImg{
+	line-height: 0.5em;
+	font-size: 0.8em;
+}
+
+.SubtotalPanier{
+	line-height: 0.5em;
+	font-size: 0.8em;
+}
+
+.buttonPanier button{
+	width: 100%;
+	border-style: none;
+	background-color: #c1c1c1c1;
+}
+
+.buttonPanier button:hover{
+	background-color: #2c353b;
+	border-color: #2c353b;
+	color: white;
+ }
+
+ .buttonPanier{
+ 	padding-top: 1%;
+ }
+
+ .infoImgPanier{
+ 	padding-bottom: 5%;
+ }
+
+ a{
+   color: black!important;
+ }
+ a:hover{
+    text-decoration: none!important;
+    color: white!important;
+  }

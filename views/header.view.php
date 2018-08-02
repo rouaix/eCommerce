@@ -1,11 +1,12 @@
 <!-- Style.css -->
-<link rel="stylesheet" type="text/css" href="./css/general.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <title>E-commerce</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="author" content="Daniel & Régis">
@@ -32,14 +33,17 @@ Le protocole Open Graph a été crée à l'origine par Facebook et est désormai
 <meta property="og:image" content="https://ecommerce.rouaix.com/views/media/logo/logo.jpg" />
 <!-- Fin Section OG -->
 <!-- Début liens CSS -->
-<link type="text/css" href="css/article.css" rel="stylesheet">
-<link type="text/css" href="css/checkout.css" rel="stylesheet">
-<link type="text/css" href="css/footer.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="views/css/general.css">
+<link rel="stylesheet" type="text/css" href="views/css/header.css">
+<link rel="stylesheet" type="text/css" href="views/css/footer.css">
+<link type="text/css" href="views/css/article.css" rel="stylesheet">
+<link type="text/css" href="views/css/checkout.css" rel="stylesheet">
+<link type="text/css" href="views/css/footer.css" rel="stylesheet">
 <link type="text/css" href="css/general.css" rel="stylesheet">
-<link type="text/css" href="css/inscription.css" rel="stylesheet">
-<link type="text/css" href="css/legal.css" rel="stylesheet">
-<link type="text/css" href="css/login.css" rel="stylesheet">
-<link type="text/css" href="css/onepage.css" rel="stylesheet">
-<link type="text/css" href="css/responsive.css" rel="stylesheet">
-<link type="text/css" href="css/shop.css" rel="stylesheet">
+<link type="text/css" href="views/css/inscription.css" rel="stylesheet">
+<link type="text/css" href="views/css/legal.css" rel="stylesheet">
+<link type="text/css" href="views/css/login.css" rel="stylesheet">
+<link type="text/css" href="views/css/onepage.css" rel="stylesheet">
+<link type="text/css" href="views/css/responsive.css" rel="stylesheet">
+<link type="text/css" href="views/css/shop.css" rel="stylesheet">
 <!-- Fin liens CSS -->

@@ -1,38 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
-
+/*@font-family: 'Roboto', sans-serif;*/
 /*________________________________TAG________________________________*/
-html{
-	font-family: 'Roboto', sans-serif;
-	width: 100%; height: 100%;
+#legal{
+	width: 100%;
+	height: auto;
 }
-
-body{
-	width: 100%; height: 100%;
-	margin:0; padding:0;
-}
-
 div .bgPhoto{
 	width: 100%;
 	text-align: center;
-}
-
-#legal{
-	margin-bottom: 15%;
-	margin-top: 15%;
 }
 
 #legal img{
 	width: 50%;
 }
 
-#legal a{
-	color:#da172a;
-}
 
-#legal a:hover{
-	color:#da172a;
-	text-decoration: none;
-}
 
 #legal h1{
 	text-align: center;
@@ -47,7 +29,7 @@ div .bgPhoto{
 
 #legal div .main{
 	display: inline-block;
-	margin-bottom: 15%;
+	margin-bottom: 5%;
 }
 
 #legal div .sub{
@@ -57,4 +39,47 @@ div .bgPhoto{
 #legal p{
 	font-weight: 300;
 	line-height: 1.5em;
+	height: 13%;
+}
+
+#legal div{
+	padding-bottom: 1%;
+}
+
+.POhover h4, .TChover h4{
+	color:#da172a;
+
+}
+
+.SubTC, .SubPO{
+	border-bottom: 5px solid white;
+}
+.PO h1, .TC h1{
+	color: #da172a;
+}
+
+
+
+a#cRetour{
+	width: 100%;
+  border-radius:3px;
+  padding:10px;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  background:rgba(0, 0, 0, 0.25);
+  position:relative; bottom: 0;
+  opacity:1;
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+  vertical-align: center;
+  display: inline-block;
+}
+a#cRetour:before{ content: "\25b2"; }
+a#cRetour:hover{
+  background:rgba(0, 0, 0, 1);
+  transition:all ease-in 0.2s;
 }

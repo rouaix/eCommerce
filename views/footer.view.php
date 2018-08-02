@@ -40,57 +40,52 @@
                     <a href="#!">Votre compte</a>
                 </p>
                 <p>
-                    <a href="#!">Livraison</a>
+                    <a href="https://www.ups.com/fr/fr/Home.page" target="_blank">Livraison</a>
                 </p>
                 <p>
-                    <a href="#!">Mon site vitrine</a>
-                </p>
-                <p>
-                    <a href="./legal.view.php">Mentions Legal</a>
+                    <a href="../views/legal.view.php">Mentions Legal</a>
                 </p>
             </div>
 
             <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none">
+       <hr class="w-100 clearfix d-md-none">
 
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                <p><i class="fa fa-envelope-o"></i> Marseille, France</p>
-                <p><i class="fa fa-at"></i> info@gmail.com</p>
-                <p><i class="fa fa-mobile-phone"></i> 06 15 01 02 03</p>
-            </div>
-            <!-- Grid column -->
+       <!-- Grid column -->
+       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+         <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+         <p><i class="fa fa-envelope-o"></i> Marseille, France</p>
+         <p><i class="fa fa-at"></i> info@gmail.com</p>
+         <p><i class="fa fa-mobile-phone"></i> 06 15 01 02 03</p>
 
-        </div>
-        <!-- Footer links -->
+         <a href="https://www.instagram.com/claralafu/" target="_blank"><i style="font-size:3em" class="fa">&#xf16d;</i></a>
+         <a href="http://claralafuente.wixsite.com/photo" target="_blank"><i style="font-size:3em" class="ml-5 fa fa-camera"></i></a>
+       </div>
+       <!-- Grid column -->
 
-        <hr>
+     </div>
+     <!-- Footer links -->
 
-        <!-- Grid row -->
-        <div class="row d-flex align-items-center">
+     <hr>
 
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8">
-                <!--Copyright-->
-                <p class="text-center text-md-left"><strong>© 2018 Copyright: </strong>Clara Lafuente Photographie - Artiste photographe professionnelle - Marseille - Les images présentés ne sont pas libres de droit et sont la propriété exclusive de Clara Lafuente Photographie. Toute diffusion, reproduction, ou modification ne peut se faire sans l'accord préalable de l'auteur.</p>
-            </div>
-            <!-- Grid column -->
+     <!-- Grid row -->
+     <div class="row d-flex align-items-center">
 
-            <!-- Grid column -->
-            <div class="col-md-5 col-lg-4 ml-lg-0">
+       <!-- Grid column -->
+       <div class="col-md-12 col-lg-12 copyR">
 
-                <a href="instagram.com"><i style="font-size:3em" class="fa">&#xf16d;</i></a>
-                <a href="#"><i style="font-size:3em" class="ml-5 fa">&#xf230;</i></a>
+         <!--Copyright-->
+         <p class="text-center text-md-left"><strong>© 2018 Copyright: </strong>Clara Lafuente Photographie- Artiste photographe professionnelle- Marseille- Les images présentés ne sont pas libres de droit et sont la propriété exclusive de Clara Lafuente Photographie. Toute diffusion, reproduction, ou modification ne peut se faire sans l'accord préalable de l'auteur.
 
-            </div>
-            <!-- Grid column -->
+         </p>
 
-        </div>
-        <!-- Grid row -->
+       </div>
+       <!-- Grid column -->
 
-    </div>
-    <!-- Footer Links -->
+     </div>
+     <!-- Grid row -->
 
-</footer>
-<!-- Footer -->
+   </div>
+   <!-- Footer Links -->
+
+ </footer>
+ <!-- Footer -->

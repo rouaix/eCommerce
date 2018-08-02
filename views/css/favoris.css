@@ -1,0 +1,29 @@
+
+
+div.articleFavoris{
+	width: 100%;
+	height: auto;
+	margin-top: 1em;
+	line-height: 1.2em;
+}
+
+
+div.articleFavoris img{
+	width: 60%;
+}
+
+div.articleFavoris p{
+	padding: 0; margin: 0 0 0 2%;
+
+}
+
+.FavArticle{
+	padding: 1%;
+	margin: 1%;
+	border: 1px solid black;
+}
+
+.FavArticle p a img{
+	width: 10%;
+	text-align: right;
+}

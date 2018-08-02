@@ -1,86 +1,125 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
-
-/*________________________________TAG________________________________*/
-html{
-	font-family: 'Roboto', sans-serif;
-	width: 100%; height: 100%;
+* {
+	box-sizing: border-box;
 }
 
-body{
-	width: 100%; height: 100%;
-	margin:0; padding:0;
+
+/*________________________________TAG________________________________*/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+
+/*__________________________________GENERAL_________________________________*/
+
+.centre {
+	text-align: center;
+}
+
+.gauche {
+	text-align: left;
+}
+
+.droite {
+	text-align: right;
+}
+
+.marge {
+	margin: 10px;
+}
+
+.pad {
+	padding: 10px;
 }
 
 
 /*__________________________________NAVBAR__________________________________*/
-.navbar-nav{
+
+.navbar-nav {
 	width: 100%;
 }
 
-.dropdown{
-width: 80%;
+.dropdown {
+	width: 80%;
 }
 
-.iconNavBar{
+.iconNavBar {
 	width: 10%;
 }
 
-.iconNavBar img{
+.iconNavBar img {
 	width: 30%;
 }
 
-div.row{
+div.row {
 	margin-right: 0;
 	margin-left: 0;
 }
 
+
 /*____________________________BANNIER DE CATÉGORIE____________________________*/
-div.baniereCat{
+
+div.baniereCat {
 	height: 8em;
 	background-image: url('./views/media/test.webp');
 	background-size: cover;
-
-
 }
-div.baniereCat img{
+
+div.baniereCat img {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
 }
 
+
 /*____________________________BARRE DE RECHERCHE____________________________*/
-div.recherche{
+
+div.recherche {
 	background-color: green;
 	height: 6em;
 }
-div.recherche div{
 
-}
+div.recherche div {}
 
 
 /*____________________________SLIDERANGE____________________________*/
 
+
 /*Look the tuto*/
+
 
 /*____________________________ARTICLE____________________________*/
 
-
-div.article{
+div.article {
 	width: 100%;
 	height: auto;
 	background-color: #c1c1c1c1;
-	border:1px solid black;
+	border: 1px solid black;
 	margin-top: 1em;
 }
 
-div.article img{
+div.article img {
 	width: 100%;
 }
 
-div.article p{
+div.article p {
 	width: 100%;
 	height: 10%;
-	padding: 0; margin: 0 0 0 2%;
-
+	padding: 0;
+	margin: 0 0 0 2%;
 }
