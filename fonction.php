@@ -3,7 +3,13 @@ if(!isset($_SESSION)){session_start();}
 
 
     if(isset($_SESSION["action"])){
-		switch ($_SESSION["action"] ) {
+		if(is_array($_SESSION["action"])){
+			$action= $_SESSION["action"];
+		}else{
+			$action = array($_SESSION["action"]);
+		}
+		foreach($action as $val){
+		switch ($val ) {
           case "newuser":
 
             $cuser = new CUser();
@@ -47,6 +53,7 @@ if(!isset($_SESSION)){session_start();}
           default:
 			//$route->setAction("shop");
       	}
+		}
     }
 
 /* Fonction de gestion des pages */

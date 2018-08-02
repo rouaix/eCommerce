@@ -57,10 +57,10 @@ class Route
 					array_push($_SESSION["view"], $view);
 				}
 			}else{
+				$x = $_SESSION["view"];
+				$_SESSION["view"] = array($x);
 				$_SESSION["view"]=$view;
 			}
-
-
 		}else{
 			$_SESSION["view"] = array();
 			array_push($_SESSION["view"], $view);
@@ -75,19 +75,17 @@ class Route
 				foreach($_SESSION["view"] as $val){
 					$path = PATH_VIEW.$val.'.php';
 					if (is_file($path) ) {
-						//require_once $path;
 						array_push($content, $path);
 					}else{
-						require_once PATH_VIEW."404.php";
+						array_push($content, PATH_VIEW."404.php");
 					}
 				}
 			}else{
 				$path = PATH_VIEW.$_SESSION["view"].'.php';
 				if ( is_file($path) ) {
-					//require_once $path;
 					array_push($content, $path);
 				}else{
-					require_once PATH_VIEW."404.php";
+					array_push($content, PATH_VIEW."404.php");
 				}
 			}
 			unset($_SESSION["view"]);

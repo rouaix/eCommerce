@@ -26,7 +26,7 @@
 			if(isset($content)){
 				if(is_array($content)){
 					foreach($content as $val){
-						$path = PATH_VIEW.$val.'view.php';
+						$path = $val;
 						if (is_file($path) ) {
 							require_once $path;
 						}else{
@@ -34,7 +34,7 @@
 						}
 					}
 				}else{
-					require_once PATH_VIEW.$content."view.php";
+					require_once $content;
 				}
 			}
 			?>
