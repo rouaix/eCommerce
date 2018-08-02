@@ -21,14 +21,10 @@ class CUser extends MUser
         if (parent::userExiste($user_email)){
             $erreur = 'Adresse mail existante.';
         }else{
-            if (parent::insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse)){
-                $_SESSION["message"] = 'Yeap ! <br /> enregistré ...';
-            }else{
-                $_SESSION["erreur"] = 'Inscription impossible. ';
-            }
+            parent::insertUser($user_nom,$user_prenom,$user_email,$user_motdepasse);
         }
-        $content = PATH_VIEW.$_SESSION["view"].".php";
-        require_once PATH_VIEW."layout.php";
+        //$content = PATH_VIEW.$_SESSION["view"].".php";
+        //require_once PATH_VIEW."layout.php";
     }
 
     /*
@@ -39,32 +35,22 @@ class CUser extends MUser
         if(count($listeViewUser)==0){
             unset($listeViewUser);
             $_SESSION["erreur"] = "Table vide";
-        }
-        $content = PATH_VIEW.$_SESSION["view"].".php";
-        require_once PATH_VIEW."layout.php";
-    }
-}
-
-/*
-if (isset($_SESSION["view"])) {
-    $action = new CUser();
-
-    switch ($_SESSION["view"]) {
-        case "UsersListe":
-            $content->getAllUsers();
-            break;
-        case "UserInscription":
-            break;
-        case "UserLogout":
-            break;
-        case "UserLogin":
-            break;
-        case "UserProfil":
-            break;
-        default:
+			return false;
+        }else{
+			return $listeViewUser;
+		}
+        //$content = PATH_VIEW.$_SESSION["view"].".php";
+        //require_once PATH_VIEW."layout.php";
     }
 
+	public function loginUsers ($email,$motdepasse) {
+		if (parent::verificationMotDePasseUser($email, $motdepasse)){
+			$_SESSION["user"] = parent::readUserEmail($email);
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
-*/
 
 ?>
